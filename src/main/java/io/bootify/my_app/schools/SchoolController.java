@@ -7,6 +7,7 @@ import java.util.List;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000/")
 @RequestMapping("/api/v1/schools")
 public class SchoolController {
 
@@ -17,14 +18,27 @@ public class SchoolController {
         this.service = schoolService;
     }
 
-    @CrossOrigin(origins = "http://localhost:3000/")
     @GetMapping("/list")
     public List<School> getAll() {
         return service.getAll();
     }
 
+    @GetMapping("/list/{location}")
+    public List<School> getByLocation(@PathVariable String location) {
+        return service.findSchoolsByLocation(location);
+    }
+
+
+
+    // Data providers could upload on their own
+    // irl would validate and add to db
+    @GetMapping("/csv")
+    public List<School> addFromCSV() {
+        return service.addFromCSV();
+    }
+
     @PostMapping("/add")
-    public void addDisease(@RequestBody School disease) {
-        service.addDisease(disease);
+    public void addSchool(@RequestBody School school) {
+        service.addDisease(school);
     }
 }
