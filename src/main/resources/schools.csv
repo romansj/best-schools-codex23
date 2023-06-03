@@ -1,0 +1,15 @@
+Id,school,website,location,lv_exam,en_exam,math_exam,school_lunches,activities,profile_based_learning,school_type,is_remote
+1,Dobeles Valsts ģimnāzija,https://www.dvg.lv/,"56.6201459469851, 23.275349254124546",,,,,swimming;sports;chess,,5,N
+2,Daugavpils Valsts ģimnāzija,https://daugrc.edu.lv/,"55.87027173245608, 26.52061422601443",,,,,sports;chess,,5,N
+3,Ziemeļvalstu ģimnāzija,https://www.zvg.lv/,"56.94641280530541, 24.01998126843771",,,,,sports;chess,,5,N
+4,Rīgas 34.vidusskola,https://www.34vsk.lv/index.php/lv/,"56.95070419760743, 24.053214725687212",,,,,sports;chess;dances;choir,,3,N
+5,Āgenskalna Valsts ģimnāzija,https://avg.lv/lv/home/,"56.94144887371722, 24.072578583086763",,,,,sports;chess,,3,N
+6,Rīgas 71.vidusskola,https://71vsk.lv/,"56.96325182929727, 24.05163724887593",,,,,sports;chess;dances;choir,,5,N
+7,Rīgas 49. vidusskola,https://49.lv/,"56.96147614643554, 24.121689782934958",,,,,sports;chess;dances;choir,,3,N
+8,Rīgas Reinholda Šmēlinga vidusskola,http://rrsvs.lv/,"56.94461582630737, 24.12044981485754",,,,,sports;chess;dances;choir;swimming,,5,N
+9,Rīgas Valsts vācu ģimnāzija,https://www.rvvg.lv/,"56.94733966245937, 24.063218454177477",,,,,sports;chess;dances;choir,,3,N
+10,Emīla Dārziņa mūzikas vidusskola,https://edmskola.lv/,"56.94545536365308, 24.077707554349864",,,,,swimming;sports;chess,,3,N
+11,Jelgavas Valsts ģimnāzija,http://vgim.jelgava.lv/,"56.64379264159419, 23.721708576171654",,,,,sports;chess;dances;choir;swimming,,5,N
+12,Jelgavas novada Neklātienes vidusskola,https://www.nvsk.lv/,"56.65128789693369, 23.722806106958476",,,,,swimming;sports;chess,,5,Y
+13,Rīgas 1. tālmācības vidusskola,http://www.r1tv.lv/lv/skola,"56.943356293745, 24.20417613358047",,,,,sports;chess;dances;choir;swimming,,3,Y
+14,Rīgas Tālmācības vidusskola,https://www.talmacibasvsk.lv/,"56.94542162723755, 24.191636000384573",,,,,swimming;sports;chess,,5,Y

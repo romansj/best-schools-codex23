@@ -1,4 +1,4 @@
-package io.bootify.my_app;
+package io.bootify.my_app.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
