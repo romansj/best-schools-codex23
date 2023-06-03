@@ -2,6 +2,9 @@
 
 Build & push image
 
-az acr login --name "codexregistry.azurecr.io"
-./gradlew jib
 
+```bash
+az acr login --name "codexregistry.azurecr.io" && ./gradlew jib
+```
+
+Port 8080
