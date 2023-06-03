@@ -1,0 +1,73 @@
+plugins {
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'com.google.cloud.tools.jib' version '3.3.2'
+    id 'maven-publish'
+    id 'java'
+}
+
+
+
+jib {
+    container {
+        jvmFlags = ['-Xms512m', '-Xdebug']
+        mainClass = 'io.bootify.my_app.MyAppApplication'
+        args = []
+        ports = ['8080/tcp']
+    }
+}
+
+// https://github.com/GoogleContainerTools/jib/blob/master/docs/faq.md#how-do-i-specify-a-platform-in-the-manifest-list-or-oci-index-of-a-base-image
+jib.from {
+    image = 'openjdk:19-ea'
+    platforms {
+        platform {
+            architecture = 'amd64'
+            os = 'linux'
+        }
+        platform {
+            architecture = 'arm64'
+            os = 'linux'
+        }
+    }
+}
+
+jib.to.image = 'codexregistry.azurecr.io/best-schools'
+
+
+group = 'io.bootify'
+version = '0.0.1-SNAPSHOT'
+
+bootRun {
+    environment SPRING_PROFILES_ACTIVE: environment.SPRING_PROFILES_ACTIVE ?: 'local'
+}
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-validation')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0')
+
+
+    annotationProcessor('org.projectlombok:lombok')
+
+
+
+
+    runtimeOnly('com.microsoft.sqlserver:mssql-jdbc')
+    compileOnly('org.projectlombok:lombok')
+    testCompileOnly('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
+    developmentOnly('org.springframework.boot:spring-boot-devtools')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
