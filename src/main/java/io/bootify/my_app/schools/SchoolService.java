@@ -47,6 +47,8 @@ public class SchoolService {
             schools.add(map);
         }
 
+        schoolRepository.saveAll(schools);
+
 
         return schools;
     }
@@ -54,10 +56,16 @@ public class SchoolService {
     School map(SchoolPojo pojo) {
         School school = new School();
         school.setName(pojo.name());
-        school.setActivities(pojo.activities());
-        school.setEnglishExam(pojo.en_exam());
         school.setWebsite(pojo.website());
         school.setLocation(pojo.location());
+        school.setLatvianExam(pojo.lv_exam());
+        school.setEnglishExam(pojo.en_exam());
+        school.setMathExam(pojo.math_exam());
+        school.setSchoolOfferMeals(pojo.school_lunches());
+        school.setProfileBasedLearning(pojo.profile_based_learning());
+        school.setSchoolType(pojo.school_type());
+        school.setIsRemote(pojo.is_remote());
+        school.setActivities(pojo.activities());
         return school;
     }
 }
