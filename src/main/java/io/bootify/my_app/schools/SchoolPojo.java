@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public record SchoolPojo(
+        @JsonIgnore
         String Id,
         @JsonAlias("school")
         String name,
