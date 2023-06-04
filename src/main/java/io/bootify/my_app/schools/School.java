@@ -2,6 +2,7 @@ package io.bootify.my_app.schools;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.util.List;
@@ -29,27 +30,34 @@ public class School {
     private String location;
 
     @Column
-    String latvianExam;
-
-    @Column
-    String englishExam;
-
-    @Column
-    String mathExam;
-
-    @Column
-    String schoolOfferMeals;
-
-    @Column
     String activities;
 
-    @Column
-    String profileBasedLearning;
+    @Size(max = 255)
+    @Column(name = "english_exam")
+    private String englishExam;
 
-    @Column
-    String schoolType;
+    @Size(max = 255)
+    @Column(name = "is_remote")
+    private String isRemote;
 
-    @Column
-    String isRemote;
+    @Size(max = 255)
+    @Column(name = "latvian_exam")
+    private String latvianExam;
+
+    @Size(max = 255)
+    @Column(name = "math_exam")
+    private String mathExam;
+
+    @Size(max = 1)
+    @Column(name = "profile_based_learning", length = 1)
+    private String profileBasedLearning;
+
+    @Size(max = 1)
+    @Column(name = "school_offer_meals", length = 1)
+    private String schoolOfferMeals;
+
+    @Size(max = 1)
+    @Column(name = "school_type", length = 1)
+    private String schoolType;
 
 }
