@@ -12,7 +12,7 @@ az acr login --name "codexregistry.azurecr.io" && ./gradlew jib
 
 ## API reference:
 ```
-[/swagger-ui.html](https://bestschools.azurewebsites.net/swagger-ui/index.html)
+https://bestschools.azurewebsites.net/swagger-ui/index.html
 ```
 
 ## JSON to POJO
