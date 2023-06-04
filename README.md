@@ -14,3 +14,6 @@ az acr login --name "codexregistry.azurecr.io" && ./gradlew jib
 ```
 /swagger-ui.html
 ```
+
+## JSON to POJO
+https://json2csharp.com/code-converters/json-to-pojo
