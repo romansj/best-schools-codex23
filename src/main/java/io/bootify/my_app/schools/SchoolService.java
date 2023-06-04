@@ -1,5 +1,11 @@
 package io.bootify.my_app.schools;
 
+import io.bootify.my_app.data_retrieval.SchoolPojo;
+import io.bootify.my_app.data_retrieval.SchoolReader;
+import io.bootify.my_app.schools.pupils.models.Record;
+import io.bootify.my_app.schools.personnel.PersonnelRepository;
+import io.bootify.my_app.schools.personnel.SchoolPersonnel;
+import io.bootify.my_app.schools.pupils.PupilRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +20,14 @@ public class SchoolService {
 
     private final PersonnelRepository personnelRepository;
 
+    private final PupilRepository pupilRepository;
+
 
     @Autowired
-    public SchoolService(SchoolRepository schoolRepository, PersonnelRepository personnelRepository) {
+    public SchoolService(SchoolRepository schoolRepository, PersonnelRepository personnelRepository, PupilRepository pupilRepository) {
         this.schoolRepository = schoolRepository;
         this.personnelRepository = personnelRepository;
+        this.pupilRepository = pupilRepository;
     }
 
     public List<School> getAll() {
@@ -77,10 +86,28 @@ public class SchoolService {
     }
 
     public List<SchoolPersonnel> getPersonnelByCounty(String county) {
-        return personnelRepository.findSchoolPersonnelByCounty(county);
+        return personnelRepository.findRecordByCountyLikeIgnoreCase(county);
     }
 
     public List<SchoolPersonnel> getPersonnelBySchool(String school) {
-        return personnelRepository.findSchoolPersonnelBySchoolName(school);
+        return personnelRepository.findSchoolPersonnelBySchoolNameLikeIgnoreCase(school);
+    }
+
+
+    public List<Record> getAllPupils() {
+        return pupilRepository.findAll();
+    }
+
+    public List<Record> getPupilsByCounty(String county) {
+        return pupilRepository.findByJurisdictionLikeIgnoreCase(county);
+    }
+
+    public List<Record> getPupilsBySchool(String school) {
+        return pupilRepository.findByNameLikeIgnoreCase(school);
+    }
+
+
+    public void addPupilCountData(ArrayList<Record> records) {
+        pupilRepository.saveAll(records);
     }
 }

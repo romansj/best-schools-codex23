@@ -1,4 +1,4 @@
-package io.bootify.my_app.schools;
+package io.bootify.my_app.schools.personnel;
 
 
 import jakarta.persistence.Column;

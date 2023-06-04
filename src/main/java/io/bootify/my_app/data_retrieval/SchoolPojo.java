@@ -1,4 +1,4 @@
-package io.bootify.my_app.schools;
+package io.bootify.my_app.data_retrieval;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnore;

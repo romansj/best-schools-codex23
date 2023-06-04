@@ -1,18 +1,16 @@
 package io.bootify.my_app.data_retrieval;
 
-import io.bootify.my_app.data_retrieval.pupilCount.Result;
-import io.bootify.my_app.data_retrieval.pupilCount.Root;
+import io.bootify.my_app.schools.pupils.models.Record;
+import io.bootify.my_app.schools.pupils.models.Root;
 import io.bootify.my_app.schools.School;
 import io.bootify.my_app.schools.SchoolService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.String.format;
@@ -67,11 +65,14 @@ public class DataController {
     }
 
     @GetMapping("/pupil_count")
+    @Operation(summary = "Update database", description = "Load data from Data.gov.LV, replace DB data. API data is paginated, set limit on how much you need and link is provided for next set of data")
     public Root getData(@RequestParam(defaultValue = "10") String limit) {
         String formatted = format(SOURCE_DATA_GOV_LV + PUPIL_COUNT + "&limit=%s", limit);
 
         ResponseEntity<Root> response = restTemplate.getForEntity(formatted, Root.class);
-        // response.getBody().getResult().getTotal();
+        ArrayList<Record> records = response.getBody().getResult().getRecords();
+        service.addPupilCountData(records);
+
 
         return response.getBody();
     }

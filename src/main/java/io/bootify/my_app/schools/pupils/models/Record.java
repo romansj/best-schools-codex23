@@ -1,23 +1,27 @@
-package io.bootify.my_app.data_retrieval.pupilCount;
+package io.bootify.my_app.schools.pupils.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Entity
+@Table(name = "pupil_count")
 public class Record {
+
     private int _id;
     @JsonProperty("Pašvaldība")
     private String jurisdiction;
 
+    @Id
     @JsonProperty("Iestādes reģistrācijas Nr.")
-    private Object regNo;
+    private String regNo;
 
     @JsonProperty("Iestādes nosaukums")
     private String name;

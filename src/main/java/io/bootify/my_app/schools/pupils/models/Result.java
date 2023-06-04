@@ -1,4 +1,4 @@
-package io.bootify.my_app.data_retrieval.pupilCount;
+package io.bootify.my_app.schools.pupils.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
