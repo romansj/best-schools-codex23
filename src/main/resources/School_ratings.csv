@@ -1,0 +1,184 @@
+place,school_name,rating,school_type
+1,Rīgas Valsts 1. ģimnāzija,162.53,gymnasium
+2,Rīgas Valsts 2. ģimnāzija,121.27,gymnasium
+3,Āgenskalna Valsts ģimnāzija,62.71,gymnasium
+4,Daugavpils Valsts ģimnāzija,61.53,gymnasium
+5,Rēzeknes Valsts 1. ģimnāzija,58.50,gymnasium
+6,Rīgas Valsts vācu ģimnāzija,49.55,gymnasium
+7,Rīgas Valsts klasiskā ģimnāzija,36.18,gymnasium
+8,Valmieras Valsts ģimnāzija,33.08,gymnasium
+9,Cēsu Valsts ģimnāzija,29.94,gymnasium
+10,Rīgas Valsts 3. ģimnāzija,23.69,gymnasium
+11,Dobeles Valsts ģimnāzija,19.94,gymnasium
+12,Rēzeknes valsts poļu ģimnāzija,18.23,gymnasium
+13,Siguldas Valsts ģimnāzija,17.50,gymnasium
+14,Jelgavas Valsts ģimnāzija,17.39,gymnasium
+15,J.Pilsudska Daugavpils valsts poļu ģimnāzija,16.75,gymnasium
+16,Jelgavas Spīdolas Valsts ģimnāzija,15.44,gymnasium
+17,Ogres Valsts ģimnāzija,13.85,gymnasium
+18,Madonas Valsts ģimnāzija,11.58,gymnasium
+19,Ernsta Glika Alūksnes Valsts ģimnāzija,9.82,gymnasium
+20,Ventspils Valsts 1. ģimnāzija,8.57,gymnasium
+21,Mārupes Valsts ģimnāzija,6.00,gymnasium
+22,Valmieras Pārgaujas Valsts ģimnāzija,5.91,gymnasium
+23,Limbažu Valsts ģimnāzija,4.67,gymnasium
+24,Jēkabpils Valsts ģimnāzija,3.00,gymnasium
+25,Jāņa Eglīša Preiļu Valsts ģimnāzija,2.68,gymnasium
+26,Bauskas Valsts ģimnāzija,2.00,gymnasium
+27,Balvu Valsts ģimnāzija,1.50,gymnasium
+28,Draudzīgā Aicinājuma Cēsu Valsts ģimnāzija,1.00,gymnasium
+28,Tukuma Raiņa Valsts ģimnāzija,1.00,gymnasium
+1,Daugavpils Tehnoloģiju vidusskola - licejs,79.31,big school
+2,Rīgas 40. vidusskola,71.48,big school
+3,Rīgas Franču licejs,60.33,big school
+4,Salaspils 1. vidusskola,60.05,big school
+5,Rīgas 10. vidusskola,51.67,big school
+6,Rīgas Centra humanitārā vidusskola,50.89,big school
+7,Daugavpils 12. vidusskola,45.67,big school
+8,Rīgas 34. vidusskola,32.09,big school
+9,Rīgas Purvciema vidusskola,28.77,big school
+9,J.G.Herdera Rīgas Grīziņkalna vidusskola,28.77,big school
+10,Daugavpils 3. vidusskola,25.05,big school
+11,Draudzīgā aicinājuma Liepājas pilsētas 5. vidusskola,23.29,big school
+12,Ogres 1. vidusskola,20.67,big school
+13,Rīgas 64. vidusskola,19.50,big school
+14,Valmieras Viestura vidusskola,19.18,big school
+15,Rīgas Zolitūdes ģimnāzija,18.02,big school
+16,Krāslavas ģimnāzija,17.71,big school
+17,Rīgas Angļu ģimnāzija,16.64,big school
+18,Rīgas Ostvalda vidusskola,16.00,big school
+19,Smiltenes vidusskola,11.33,big school
+20,Rīgas 72. vidusskola,10.50,big school
+21,Jēkabpils 3. vidusskola,10.37,big school
+22,Rīgas 21. vidusskola,7.50,big school
+23,Ādažu vidusskola,6.72,big school
+24,Jelgavas Tehnoloģiju vidusskola,6.00,big school
+24,Siguldas pilsētas vidusskola,6.00,big school
+25,Gulbenes novada vidusskola,5.11,big school
+26,Liepājas Liedaga vidusskola,5.05,big school
+27,Ludzas 2. vidusskola,4.91,big school
+28,Rīgas 92. vidusskola,4.23,big school
+29,Oskara Kalpaka Liepājas 15. vidusskola,4.00,big school
+30,Rīgas 33. vidusskola,3.75,big school
+31,Cēsu Pilsētas vidusskola,3.50,big school
+31,Valmieras 2. vidusskola,3.50,big school
+32,Puškina licejs,3.00,big school
+33,J. Čakstes Liepājas pilsētas 10. vidusskola,2.50,big school
+33,Rīgas 88. vidusskola,2.50,big school
+33,V. Plūdoņa Kuldīgas vidusskola,2.50,big school
+34,Rīgas 45. vidusskola,2.00,big school
+34,Rīgas 6. vidusskola,2.00,big school
+34,Rīgas Rīnūžu vidusskola,2.00,big school
+34,Rīgas Teikas vidusskola,2.00,big school
+35,Ventspils 4. vidusskola,1.50,big school
+36,Aizkraukles novada vidusskola,1.00,big school
+36,Daugavpils 10. vidusskola,1.00,big school
+36,Liepājas 7. vidusskola,1.00,big school
+36,Liepājas Raiņa 6. vidusskola,1.00,big school
+36,Rīgas 84. vidusskola,1.00,big school
+36,Tukuma 2. vidusskola,1.00,big school
+37,Rīgas 49. vidusskola,0.50,big school
+37,Rīgas Ķengaraga vidusskola,0.50,big school
+1,RTU Inženierzinātņu vidusskola,157.00,small school
+2,Andreja Pumpura Rīgas 11. pamatskola,38.00,small school
+3,Rēzeknes 5. vidusskola,32.83,small school
+4,Austrumlatvijas Tehnoloģiju vidusskola,29.33,small school
+5,Riebiņu vidusskola,25.31,small school
+6,Rīgas 13. vidusskola,22.50,small school
+7,Daugavpils Saskaņas pamatskola,21.59,small school
+8,Starptautiskā vidusskola ""Ekziperī""".19,19,small school
+9,Kuldīgas Centra vidusskola,19.17,small school
+10,Rīgas 1. vidusskola,18.86,small school
+11,Valdemārpils vidusskola,16.33,small school
+12,Auces vidusskola,16.00,small school
+13,Nautrēnu vidusskola,14.50,small school
+14,Ludzas pilsētas vidusskola,13.65,small school
+15,Jēkabpils 2. vidusskola,13.50,small school
+15,Špoģu vidusskola,13.50,small school
+16,Siguldas 1. pamatskola,13.43,small school
+17,Saldus novada pašvaldības Druvas vidusskola,13.26,small school
+18,Maltas vidusskola,11.52,small school
+19,Rēzeknes 2. vidusskola,11.00,small school
+20,Salacgrīvas vidusskola,10.00,small school
+21,Olaines 2. vidusskola,9.94,small school
+22,Daugavpils 13. vidusskola,8.97,small school
+23,Jūrmalas Pumpuru vidusskola,8.76,small school
+24,Āgenskalna sākumskola,8.00,small school
+24,Jelgavas 4. sākumskola,8.00,small school
+25,Kandavas Kārļa Mīlenbaha vidusskola,7.11,small school
+26,Laurenču sākumskola,7.00,small school
+27,Emīla Dārziņa mūzikas skola,6.50,small school
+27,Ogres sākumskola,6.50,small school
+28,Līvānu 1. vidusskola,6.10,small school
+29,Rīgas Doma kora skola,6.00,small school
+30,Ezernieku vidusskola,5.50,small school
+30,Jaunmārupes pamatskola,5.50,small school
+31,Rēzeknes sākumskola,5.00,small school
+32,Alūksnes pilsētas sākumskola,4.00,small school
+32,Rīgas Valda Zālīša sākumskola,4.00,small school
+33,Saldus vidusskola,3.83,small school
+34,Cēsu pilsētas Pastariņa sākumskola,3.50,small school
+34,Mārupes pamatskola,3.50,small school
+35,Rīgas Daugavgrīvas vidusskola,3.33,small school
+36,Jelgavas Centra pamatskola,3.00,small school
+36,Rēzeknes 6. pamatskola,3.00,small school
+36,Smārdes pamatskola,3.00,small school
+37,Rīgas 69. pamatskola,2.86,small school
+38,Dagdas vidusskola,2.67,small school
+39,Ādažu Brīvā Valdorfa skola,2.50,small school
+39,Kalupes pamatskola,2.50,small school
+39,Privātā pamatskola DOMDARIS,2.50,small school
+39,Salas sākumskola,2.50,small school
+39,Skrundas vidusskola,2.50,small school
+39,Rīgas 66. vidusskola,2.50,small school
+40,Baldones vidusskola,2.00,small school
+40,Mežvidu pamatskola,2.00,small school
+40,Pļavniekkalna sākumskola,2.00,small school
+40,Rīgas Valdorfskola,2.00,small school
+40,Sventes vidusskola,2.00,small school
+40,Eglaines pamatskola,2.00,small school
+41,Ilmāra Gaiša Kokneses vidusskola,1.67,small school
+42,Aglonas vidusskola,1.50,small school
+42,Aizputes vidusskola,1.50,small school
+42,Andreja Upīša Skrīveru vidusskola,1.50,small school
+42,Carnikavas pamatskola,1.50,small school
+42,Cēsu 1. pamatskola,1.50,small school
+42,Daugavpils 9. vidusskola,1.50,small school
+42,Gaigalavas pamatskola,1.50,small school
+42,Jelgavas Pārlielupes pamatskola,1.50,small school
+42,"Privātā vidusskola ""Patnis""",1.50,small school
+42,Rīgas Ziepniekkalna vidusskola,1.50,small school
+42,Tukuma E. Birznieka - Upīša 1. pamatskola,1.50,small school
+42,Vārkavas vidusskola,1.50,small school
+42,Ventspils 1. pamatskola,1.50,small school
+42,Zentas Mauriņas Grobiņas vidusskola,1.50,small school
+43,Saulkrastu novada vidusskola,1.43,small school
+44,Amatas pamatskola,1.00,small school
+44,Ata Kronvalda Durbes pamatskola,1.00,small school
+44,Edgara Kauliņa Lielvārdes vidusskola,1.00,small school
+44,Grundzāles pamatskola,1.00,small school
+44,Palsmanes pamatskola,1.00,small school
+44,Rīgas 65. pamatskola,1.00,small school
+44,Rīgas 7. pamatskola,1.00,small school
+44,Straupes pamatskola,1.00,small school
+45,Krāslavas Varavīksnes vidusskola,0.67,small school
+46,Andrupenes pamatskola,0.50,small school
+46,Balvu sākumskola,0.50,small school
+46,Cēsu 2. pamatskola,0.50,small school
+46,Daugavpils 15. vidusskola,0.50,small school
+46,Engures vidusskola,0.50,small school
+46,Ikšķiles vidusskola,0.50,small school
+46,Jaunsilavas pamatskola,0.50,small school
+46,Kārsavas vidusskola,0.50,small school
+46,Lapmežciema pamatskola,0.50,small school
+46,Liepājas Katoļu pamatskola,0.50,small school
+46,Liepu pamatskola,0.50,small school
+46,"Privātā sākumskola ""Namiņš""",0.50,small school
+46,Rēzeknes Katoļu vidusskola,0.50,small school
+46,Rudzātu vidusskola,0.50,small school
+46,Salaspils pamatskola,0.50,small school
+46,Svētes pamatskola,0.50,small school
+46,Valmieras Pārgaujas sākumskola,0.50,small school
+46,Valmieras sākumskola,0.50,small school
+46,Ventspils 3. pamatskola,0.50,small school
+47,Mērsraga vidusskola,0.33,small school

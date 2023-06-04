@@ -1,8 +1,6 @@
 package io.bootify.my_app.schools.grades;
 
-import io.bootify.my_app.GradeNineExams;
-import io.bootify.my_app.GradeTwelveExams;
-import io.bootify.my_app.schools.pupils.models.Record;
+import io.bootify.my_app.schools.exams.GradeTwelveExams;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

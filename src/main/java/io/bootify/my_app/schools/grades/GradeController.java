@@ -1,7 +1,7 @@
 package io.bootify.my_app.schools.grades;
 
-import io.bootify.my_app.GradeNineExams;
-import io.bootify.my_app.GradeTwelveExams;
+import io.bootify.my_app.schools.exams.GradeNineExams;
+import io.bootify.my_app.schools.exams.GradeTwelveExams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

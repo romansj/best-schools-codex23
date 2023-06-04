@@ -1,4 +1,4 @@
-package io.bootify.my_app;
+package io.bootify.my_app.schools.exams;
 
 import jakarta.persistence.*;
 import lombok.Getter;
