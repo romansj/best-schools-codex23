@@ -12,10 +12,13 @@ public class SchoolService {
 
     private final SchoolRepository schoolRepository;
 
+    private final PersonnelRepository personnelRepository;
+
 
     @Autowired
-    public SchoolService(SchoolRepository schoolRepository) {
+    public SchoolService(SchoolRepository schoolRepository, PersonnelRepository personnelRepository) {
         this.schoolRepository = schoolRepository;
+        this.personnelRepository = personnelRepository;
     }
 
     public List<School> getAll() {
@@ -27,7 +30,7 @@ public class SchoolService {
     }
 
 
-    public void addDisease(School disease) {
+    public void addSchool(School disease) {
         schoolRepository.save(disease);
     }
 
@@ -67,5 +70,17 @@ public class SchoolService {
         school.setIsRemote(pojo.is_remote());
         school.setActivities(pojo.activities());
         return school;
+    }
+
+    public List<SchoolPersonnel> getAllPersonnel() {
+        return personnelRepository.findAll();
+    }
+
+    public List<SchoolPersonnel> getPersonnelByCounty(String county) {
+        return personnelRepository.findSchoolPersonnelByCounty(county);
+    }
+
+    public List<SchoolPersonnel> getPersonnelBySchool(String school) {
+        return personnelRepository.findSchoolPersonnelBySchoolName(school);
     }
 }

@@ -28,8 +28,6 @@ public class SchoolController {
         return service.findSchoolsByLocation(location);
     }
 
-
-
     // Data providers could upload on their own
     // irl would validate and add to db
     @GetMapping("/csv")
@@ -39,6 +37,27 @@ public class SchoolController {
 
     @PostMapping("/add")
     public void addSchool(@RequestBody School school) {
-        service.addDisease(school);
+        service.addSchool(school);
     }
+
+
+    // ******************************************************** //
+    // ** PERSONNEL **
+    // ******************************************************** //
+    @GetMapping("/personnel")
+    public List<SchoolPersonnel> getPersonnelData() {
+        return service.getAllPersonnel();
+    }
+
+    @GetMapping("/personnel/county/{county}")
+    public List<SchoolPersonnel> getPersonnelDataByCounty(@PathVariable String county) {
+        return service.getPersonnelByCounty(county);
+    }
+
+    @GetMapping("/personnel/school/{school}")
+    public List<SchoolPersonnel> getPersonnelDataBySchool(@PathVariable String school) {
+        return service.getPersonnelBySchool(school);
+    }
+
+
 }
