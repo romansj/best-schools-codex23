@@ -41,23 +41,4 @@ public class SchoolController {
     }
 
 
-    // ******************************************************** //
-    // ** PERSONNEL **
-    // ******************************************************** //
-    @GetMapping("/personnel")
-    public List<SchoolPersonnel> getPersonnelData() {
-        return service.getAllPersonnel();
-    }
-
-    @GetMapping("/personnel/county/{county}")
-    public List<SchoolPersonnel> getPersonnelDataByCounty(@PathVariable String county) {
-        return service.getPersonnelByCounty(county);
-    }
-
-    @GetMapping("/personnel/school/{school}")
-    public List<SchoolPersonnel> getPersonnelDataBySchool(@PathVariable String school) {
-        return service.getPersonnelBySchool(school);
-    }
-
-
 }
