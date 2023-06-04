@@ -2,7 +2,7 @@ plugins {
     id 'org.springframework.boot' version '3.1.0'
     id 'io.spring.dependency-management' version '1.1.0'
     id 'com.google.cloud.tools.jib' version '3.3.2'
-    id 'maven-publish'
+    id 'com.palantir.git-version' version '3.0.0'
     id 'java'
 }
 
@@ -32,11 +32,18 @@ jib.from {
     }
 }
 
-jib.to.image = 'codexregistry.azurecr.io/best-schools'
+jib {
+    to {
+        image = 'codexregistry.azurecr.io/best-schools'
+        version = project.version
+    }
+}
+
 
 
 group = 'io.bootify'
-version = '0.0.1-SNAPSHOT'
+version = gitVersion()
+
 
 bootRun {
     environment SPRING_PROFILES_ACTIVE: environment.SPRING_PROFILES_ACTIVE ?: 'local'
