@@ -73,7 +73,6 @@ public class DataController {
         ArrayList<Record> records = response.getBody().getResult().getRecords();
         service.addPupilCountData(records);
 
-
         return response.getBody();
     }
 }
