@@ -66,5 +66,4 @@ public class GradeTwelveExams {
 
     @Column(name = "year")
     private Integer year;
-
 }
