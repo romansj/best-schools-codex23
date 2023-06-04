@@ -15,11 +15,13 @@ import lombok.Setter;
 @Table(name = "pupil_count")
 public class Record {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private int _id;
     @JsonProperty("Pašvaldība")
     private String jurisdiction;
 
-    @Id
     @JsonProperty("Iestādes reģistrācijas Nr.")
     private String regNo;
 
