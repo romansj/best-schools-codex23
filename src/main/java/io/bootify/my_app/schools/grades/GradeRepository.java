@@ -22,8 +22,8 @@ public interface GradeRepository extends JpaRepository<GradeTwelveExams, Long> {
     List<GradeTwelveExams> findByExamNameLikeIgnoreCaseAndSchoolNameLikeIgnoreCase(String testName, String schoolName);
 
     @Query("select ex from GradeTwelveExams ex "
-            + "where (:schoolName is null or ex.schoolName like :schoolName) and"
-            + "(:testName is null or ex.examName like :testName) and"
+            + "where (:schoolName is null or ex.schoolName like %:schoolName%) and"
+            + "(:testName is null or ex.examName like %:testName%) and"
             + "(:totalScore is null or ex.averageScore >= :totalScore)")
     public List<GradeTwelveExams> findGradeByExamAndSchoolAndGrade(
             @Param("testName") String testName,

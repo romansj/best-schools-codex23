@@ -54,7 +54,7 @@ public class GradeService {
         return gradeNineRepo.findAll();
     }
 
-    List<GradeNineExams> findGradeNineByExamAndSchoolAndGrade(String school, String exam, Double totalScore) {
+    List<GradeNineExams> findGradeNineByExamAndSchoolAndGrade(String exam,String school, Double totalScore) {
         return gradeNineRepo.findGradeNineByExamAndSchoolAndGrade(exam, school, totalScore);
     }
 
@@ -74,7 +74,7 @@ public class GradeService {
         return gradeNineRepo.findByTestNameLikeIgnoreCaseAndSchoolNameLikeIgnoreCase(testName, schoolName);
     }
 
-    List<GradeTwelveExams> findGradeByExamAndSchoolAndGrade(String school, String exam, Double totalScore) {
+    List<GradeTwelveExams> findGradeByExamAndSchoolAndGrade(String exam, String school, Double totalScore) {
         return gradeTwelveRepo.findGradeByExamAndSchoolAndGrade(exam, school, totalScore);
     }
 }
