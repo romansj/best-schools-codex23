@@ -1,15 +1,15 @@
 package io.bootify.my_app.data_retrieval;
 
-import io.bootify.my_app.schools.pupils.models.Record;
-import io.bootify.my_app.schools.pupils.models.Root;
 import io.bootify.my_app.schools.SchoolService;
+import io.bootify.my_app.schools.pupils.models.Root;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.ArrayList;
 
 import static java.lang.String.format;
 
@@ -61,8 +61,8 @@ public class DataController {
     public ResponseEntity<?> getData(@RequestParam(defaultValue = "10") String limit) {
         String formatted = format(SOURCE_DATA_GOV_LV + PUPIL_COUNT + "&limit=%s", limit);
 
-        ResponseEntity<Root> response = restTemplate.getForEntity(formatted, Root.class);
-        ArrayList<Record> records = response.getBody().getResult().getRecords();
+        var response = restTemplate.getForEntity(formatted, Root.class);
+        var records = response.getBody().getResult().getRecords();
         service.addPupilCountData(records);
 
         return ResponseEntity.accepted().build();

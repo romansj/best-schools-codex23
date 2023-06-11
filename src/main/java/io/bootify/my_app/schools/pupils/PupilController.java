@@ -1,7 +1,7 @@
 package io.bootify.my_app.schools.pupils;
 
-import io.bootify.my_app.schools.pupils.models.Record;
 import io.bootify.my_app.schools.SchoolService;
+import io.bootify.my_app.schools.pupils.models.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

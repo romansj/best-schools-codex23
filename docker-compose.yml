@@ -1,22 +1,19 @@
-version: '3'
+version: '2'
 
 services:
   app:
     env_file: .env
-    #    image: 'acherrydev/codexrepo:latest'
-    build:
-      context: build
-      dockerfile: ../Dockerfile
+    image: 'acherrydev/codexrepo:latest'
+#    build:
+#      context: build
+#      dockerfile: ../Dockerfile
     container_name: school_guru
     depends_on:
       - db
     environment:
       spring.datasource.url: "jdbc:postgresql://wonder-bittern-8245.8nj.cockroachlabs.cloud:26257/matrix1?sslmode=require&user=${POSTGRES_USER1}&password=${POSTGRES_PASSWORD1}"
-#      spring.datasource.url: "jdbc:postgresql://wonder-bittern-8245.8nj.cockroachlabs.cloud:26257/matrix1?sslmode=require"
       spring.datasource.username: "${POSTGRES_USER1}"
       spring.datasource.password: "${POSTGRES_PASSWORD1}"
-      spring.jpa.hibernate.ddl.auto: "update"
-      spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
     ports:
       - "8080:8080"
 

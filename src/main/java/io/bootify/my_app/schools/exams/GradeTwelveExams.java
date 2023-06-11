@@ -12,16 +12,16 @@ public class GradeTwelveExams {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private Long id;
 
     @Column(name = "county_code")
-    private Integer countyCode;
+    private Short countyCode;
 
-    @Lob
+
     @Column(name = "school_name")
     private String schoolName;
 
-    @Lob
+
     @Column(name = "exam_name")
     private String examName;
 
@@ -65,6 +65,6 @@ public class GradeTwelveExams {
     private Integer ninetyToHundred;
 
     @Column(name = "year")
-    private Integer year;
+    private Short year;
 
 }

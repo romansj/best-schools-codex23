@@ -12,24 +12,24 @@ public class GradeNineExams {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private Long id;
 
-    @Lob
+
     @Column(name = "test_name", length = 20)
     private String testName;
 
-    @Lob
+
     @Column(name = "school_name", length = 50)
     private String schoolName;
 
-    @Lob
+
     @Column(name = "total_score")
     private Double totalScore;
 
-    @Column(name = "taker_count", length=5)
+    @Column(name = "taker_count", length = 5)
     private Integer examTakersCount;
 
     @Column(name = "year")
-    private Integer year;
+    private Short year;
 
 }

@@ -7,42 +7,42 @@ plugins {
 }
 
 
-
 jib {
-    container {
-        jvmFlags = ['-Xms512m', '-Xdebug']
-        mainClass = 'io.bootify.my_app.MyAppApplication'
-        args = []
-        ports = ['8080/tcp']
-    }
-}
-
-// https://github.com/GoogleContainerTools/jib/blob/master/docs/faq.md#how-do-i-specify-a-platform-in-the-manifest-list-or-oci-index-of-a-base-image
-jib.from {
-    image = 'openjdk:19-ea'
-    platforms {
-        platform {
-            architecture = 'amd64'
-            os = 'linux'
-        }
-        platform {
-            architecture = 'arm64'
-            os = 'linux'
+    from {
+        image = 'eclipse-temurin:19-jre-jammy'
+        // https://github.com/GoogleContainerTools/jib/blob/master/docs/faq.md#how-do-i-specify-a-platform-in-the-manifest-list-or-oci-index-of-a-base-image
+        platforms {
+            platform {
+                architecture = 'amd64'
+                os = 'linux'
+            }
+            // keep only one enabled if you want to run jibDockerBuild as that does not support multiple platforms
+            platform {
+                architecture = 'arm64'
+                os = 'linux'
+            }
         }
     }
-}
 
-jib {
     to {
-//        image = 'codexregistry.azurecr.io/best-schools'
+        // image = 'codexregistry.azurecr.io/best-schools'
         image = 'acherrydev/codexrepo'
+        tags = [gitVersion()]
         version = project.version
+    }
+
+    container {
+        jvmFlags = ['-Xms512m', '-Xdebug', '-Dspring.profiles.active=prod']
+        mainClass = 'io.bootify.my_app.MyAppApplication'
+        creationTime = 'USE_CURRENT_TIMESTAMP'
+        ports = ['8080/tcp']
     }
 }
 
 
 
 group = 'io.bootify'
+// dockerfile: will not know which file to copy from build/libs because each will be named differently
 //version = gitVersion()
 version = "my-app-0.0.1-SNAPSHOT"
 
@@ -66,7 +66,7 @@ dependencies {
 
 
 
-    implementation('org.springframework.boot:spring-boot-docker-compose')
+//    developmentOnly('org.springframework.boot:spring-boot-docker-compose')
 
 
     // region lombok
@@ -84,17 +84,21 @@ dependencies {
 
 
     // region db
-//    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    // implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     runtimeOnly 'org.postgresql:postgresql'
     // runtimeOnly('com.microsoft.sqlserver:mssql-jdbc')
     // endregion
 
     developmentOnly('org.springframework.boot:spring-boot-devtools')
+
+    // region testing
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 
     testImplementation 'org.springframework.boot:spring-boot-testcontainers'
-//    testImplementation 'org.testcontainers:postgresql'
+    // testImplementation 'org.testcontainers:postgresql'
+
+    // endregion
 }
 
 tasks.named('test') {
