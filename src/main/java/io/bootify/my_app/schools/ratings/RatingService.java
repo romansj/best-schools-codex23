@@ -21,7 +21,7 @@ public class RatingService {
         return ratingRepository.findAll();
     }
 
-    public List<SchoolRating> findSchoolRatingsBySchoolNameAndTypeAndRating(String  school, String type, BigDecimal rating) {
+    public List<SchoolRating> findSchoolRatingsBySchoolNameAndTypeAndRating(String school, String type, BigDecimal rating) {
         return ratingRepository.findSchoolRatingsBySchoolNameAndTypeAndRating(school, type, rating);
     }
 }

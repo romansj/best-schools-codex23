@@ -2,10 +2,10 @@ package io.bootify.my_app.schools;
 
 import io.bootify.my_app.data_retrieval.SchoolPojo;
 import io.bootify.my_app.data_retrieval.SchoolReader;
-import io.bootify.my_app.schools.pupils.models.Record;
 import io.bootify.my_app.schools.personnel.PersonnelRepository;
 import io.bootify.my_app.schools.personnel.SchoolPersonnel;
 import io.bootify.my_app.schools.pupils.PupilRepository;
+import io.bootify.my_app.schools.pupils.models.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,7 +45,7 @@ public class SchoolService {
 
 
     public List<School> addFromCSV() {
-        File file = new File(getClass().getResource("/schools.csv").getFile());
+        File file = new File(getClass().getResource("/school_data/schools.csv").getFile());
         List<SchoolPojo> schoolPojos;
         try {
             schoolPojos = SchoolReader.readFile(file);

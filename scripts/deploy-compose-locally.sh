@@ -1,0 +1,1 @@
+./gradlew jib && docker pull acherrydev/codexrepo && docker compose up

@@ -1,11 +1,8 @@
 package io.bootify.my_app.schools;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.*;
-
-import java.util.List;
 
 @Entity
 @Table(name = "school")

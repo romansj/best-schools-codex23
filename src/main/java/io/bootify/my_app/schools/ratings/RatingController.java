@@ -25,7 +25,7 @@ public class RatingController {
     }
 
     @GetMapping("/")
-    public List<SchoolRating> findSchoolRatingsBySchoolNameAndTypeAndRating(@RequestParam(required = false) String schoolName, @RequestParam(required = false)String schoolType, @RequestParam(required = false) BigDecimal rating) {
+    public List<SchoolRating> findSchoolRatingsBySchoolNameAndTypeAndRating(@RequestParam(required = false) String schoolName, @RequestParam(required = false) String schoolType, @RequestParam(required = false) BigDecimal rating) {
         return service.findSchoolRatingsBySchoolNameAndTypeAndRating(schoolName, schoolType, rating);
     }
 

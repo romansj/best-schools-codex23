@@ -11,7 +11,7 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Result{
+public class Result {
     private boolean include_total;
     private String resource_id;
     private ArrayList<Field> fields;

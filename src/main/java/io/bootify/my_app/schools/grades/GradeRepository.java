@@ -11,6 +11,7 @@ import java.util.List;
 @Repository
 public interface GradeRepository extends JpaRepository<GradeTwelveExams, Long> {
     List<GradeTwelveExams> findByAverageScoreGreaterThan(Double minScore);
+
     List<GradeTwelveExams> findByCountTakersGreaterThan(Integer minTakers);
 
     List<GradeTwelveExams> findBySchoolNameLikeIgnoreCase(String testName);
