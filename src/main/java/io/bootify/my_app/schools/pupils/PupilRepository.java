@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface PupilRepository extends JpaRepository<Record, Long> {
     List<Record> findByJurisdictionLikeIgnoreCase(String jurisdiction);
+
     List<Record> findByNameLikeIgnoreCase(String school);
 }

@@ -12,9 +12,13 @@ import java.util.List;
 @Repository
 public interface GradeNineRepository extends JpaRepository<GradeNineExams, JpaSpecificationExecutor<GradeNineExams>> {
     List<GradeNineExams> findBySchoolNameLikeIgnoreCase(String school);
+
     List<GradeNineExams> findByTestNameLikeIgnoreCase(String testName);
+
     List<GradeNineExams> findByTestNameLikeIgnoreCaseAndSchoolNameLikeIgnoreCase(String testName, String schoolName);
+
     List<GradeNineExams> findByTotalScoreGreaterThan(Double totalScore);
+
     List<GradeNineExams> findByExamTakersCountGreaterThan(Integer minTakers);
 
     @Query("select ex from GradeNineExams ex "

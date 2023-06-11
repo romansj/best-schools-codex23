@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Root{
+public class Root {
     private String help;
     private boolean success;
     private Result result;

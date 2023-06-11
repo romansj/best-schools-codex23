@@ -8,5 +8,6 @@ import java.util.List;
 @Repository
 public interface PersonnelRepository extends JpaRepository<SchoolPersonnel, Long> {
     List<SchoolPersonnel> findRecordByCountyLikeIgnoreCase(String county);
+
     List<SchoolPersonnel> findSchoolPersonnelBySchoolNameLikeIgnoreCase(String school);
 }

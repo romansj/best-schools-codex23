@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Links{
+public class Links {
     private String start;
     private String next;
 }
