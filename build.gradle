@@ -1,20 +1,27 @@
 plugins {
-    id 'org.springframework.boot' version '3.1.0'
-    id 'io.spring.dependency-management' version '1.1.0'
+    alias(libs.plugins.spring.boot)
+    // id 'io.spring.dependency-management' version '1.1.0'
     id 'com.google.cloud.tools.jib' version '3.3.2'
     id 'com.palantir.git-version' version '3.0.0'
     id 'java'
 }
 
 
+group = 'io.bootify'
+// dockerfile: will not know which file to copy from build/libs because each will be named differently
+//version = gitVersion()
+version = "my-app-0.0.1-SNAPSHOT"
+
+
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(19)
         vendor = JvmVendorSpec.AMAZON
     }
 }
 
 
+// Containerization with Google Jib
 jib {
     from {
         image = 'eclipse-temurin:19-jre-jammy'
@@ -48,40 +55,36 @@ jib {
 }
 
 
-
-group = 'io.bootify'
-// dockerfile: will not know which file to copy from build/libs because each will be named differently
-//version = gitVersion()
-version = "my-app-0.0.1-SNAPSHOT"
-
-
 bootRun {
     environment SPRING_PROFILES_ACTIVE: environment.SPRING_PROFILES_ACTIVE ?: 'local'
 }
 
 
+// Dependency declarations
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation('org.springframework.boot:spring-boot-starter-web')
-    implementation('org.springframework.boot:spring-boot-starter-validation')
-    implementation('org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0')
-    implementation('org.springframework.boot:spring-boot-starter-webflux:3.1.0')
-    implementation('org.springdoc:springdoc-openapi-starter-webflux-ui:2.1.0')
+    // https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
+    implementation platform(libs.spring.boot.dependencies)
 
+    implementation(libs.spring.boot.web)
+    implementation(libs.spring.boot.validation)
+    implementation(libs.spring.boot.webflux)
+    implementation(libs.spring.openapi)
+    implementation(libs.spring.boot.webfluxui)
 
 
 //    developmentOnly('org.springframework.boot:spring-boot-docker-compose')
 
 
     // region lombok
-    annotationProcessor('org.projectlombok:lombok')
-    compileOnly('org.projectlombok:lombok')
-    testCompileOnly('org.projectlombok:lombok')
-    testAnnotationProcessor('org.projectlombok:lombok')
+    annotationProcessor(libs.lombok)
+    compileOnly(libs.lombok)
+    testCompileOnly(libs.lombok)
+    testAnnotationProcessor(libs.lombok)
     // endregion
 
 
