@@ -7,6 +7,14 @@ plugins {
 }
 
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.AMAZON
+    }
+}
+
+
 jib {
     from {
         image = 'eclipse-temurin:19-jre-jammy'
